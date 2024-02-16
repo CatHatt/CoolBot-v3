@@ -1,0 +1,25 @@
+{
+    "name": "coolbot-v3",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "tsx watch src/index.ts",
+        "build": "tsc",
+        "start": "node ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "C:\\Users\\elias.keskinenrasmu\\Documents\\GitHub\\CoolBot-v3"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "discord.js": "^14.14.1",
+        "dotenv": "^16.4.2"
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.17",
+        "tsx": "^4.7.1"
+    }
+}
