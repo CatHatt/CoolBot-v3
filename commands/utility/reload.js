@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('discord.js');
 const fs = require('fs');
+const commandReference = require('../commandReference.json');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -23,19 +24,9 @@ module.exports = {
             );
         }
 
-        let commandPath;
-        for (let folder of fs.readdirSync('./commands')) {
-            console.log(folder)
-            for (let file of fs.readdirSync(`./commands/${folder}`)) {
-                console.log(`f: ${file}`)
-                if (file == `${command.data.name}.js`) {
-                    commandPath = `../${folder}/${file}`;
-                    break;
-                }
-            }
-            if (commandPath) break;
-        }
+        const referenceObject = Object.fromEntries(commandReference.map(item => [item.name, item.path]));
 
+        const commandPath = '.' + referenceObject[command.data.name];
         console.log(commandPath)
 
         delete require.cache[require.resolve(commandPath)];

@@ -1,0 +1,22 @@
+[
+    {
+        "name": "cool",
+        "path": ".\\funstuff\\cool.js"
+    },
+    {
+        "name": "ping",
+        "path": ".\\utility\\ping.js"
+    },
+    {
+        "name": "reload",
+        "path": ".\\utility\\reload.js"
+    },
+    {
+        "name": "server",
+        "path": ".\\utility\\server.js"
+    },
+    {
+        "name": "user",
+        "path": ".\\utility\\user.js"
+    }
+]
